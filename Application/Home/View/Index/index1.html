@@ -1,0 +1,77 @@
+<extend name="Public/base" />
+<block name="main">
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row top-tags">
+                <div class="top-article-tag">
+                    <a href="{:U('Index/index')}">
+                        <div <if condition="$_GET['category'] != 0">class="tag-element"<else />class="tag-element tag-current"</if> >全部</div>
+                    </a>
+                </div>
+                <volist name="cate_list" id="cate">
+                    <div class="top-article-tag">
+                        <a href="{:U('Index/index',array('category'=>$cate['id']))}">
+                            <div <if condition="$_GET['category'] eq $cate['id']">class="tag-element tag-current" <else />class="tag-element"</if> >{$cate['name']}</div>
+                        </a>
+                    </div>
+                </volist>
+            </div>
+            <div class="row" id="list">
+                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 article-item fadeInLeft delay0d3s" v-for="row in list">
+                    <div class="article-panel">
+                        <a href="Index-single-id-{{row.id}}">
+                            <div class="article-cover" style="background-image: url(__ROOT__/Uploads{$vo['cover']})">
+                                <div class="featured" title="推荐文章" v-if="row.is_top = 1">
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="featured" title="推荐文章" v-else></div>
+                            </div>
+                        </a>
+                        <div class="article-title">
+                            <a href="Index-single-id-{{row.id}}">{{row.title}}</a>
+                        </div>
+                        <div class="article-brief">
+                            {{row.brief}}
+                        </div>
+                        <div class="article-info">
+                            <span class="create-time">
+                                <i class="fa fa-clock-o"></i>
+                                {{row.create_time}}
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <nav class="pagination" role="navigation">
+                {$page}
+            </nav>
+        </div>
+    </section>
+<block name="script">
+    <script>
+        var example1 = new Vue({
+            el: '#list',
+            data: {
+                list: [
+                    {
+                        id: '1',
+                        title: '哈哈',
+                        brief:'这是一篇测试文章',
+                        create_time:'2016-01-19 18:38',
+                        is_top:'1'
+                    },
+                    {
+                        id: '2',
+                        title: '哈哈1',
+                        brief:'这是一篇测试文章2',
+                        create_time:'2016-01-19 18:40',
+                        is_top:'0'
+                    }
+                ]
+            }
+        })
+    </script>
+</block>
+</block>
+
+

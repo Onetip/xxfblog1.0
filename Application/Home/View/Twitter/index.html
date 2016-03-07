@@ -1,0 +1,28 @@
+<extend name="Public/base" />
+<block name="main">
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-lg-10 col-lg-push-1 main-content">
+                <volist name="list" id="row">
+                    <article class="post twitter-post">
+                        <div class="post-content">
+                            <p>{$row['content']}</p>
+                        </div>
+                        <footer class="post-footer clearfix">
+                            <div class="pull-left">
+                                <time class="post-date" title="{$row['create_time']}">
+                                    <i class="fa fa-clock-o"></i>
+                                    {$row['create_time']|date='Y-m-d H:i',###}
+                                </time>
+                            </div>
+                        </footer>
+                    </article>
+                </volist>
+                </main>
+            </div>
+        </div>
+    </section>
+</block>
+
+

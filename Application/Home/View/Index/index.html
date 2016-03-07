@@ -1,0 +1,63 @@
+<extend name="Public/base" />
+<block name="main">
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row top-tags">
+                <div class="top-article-tag">
+                    <a href="{:U('Index/index')}">
+                        <div <if condition="$_GET['category'] != 0">class="tag-element"<else />class="tag-element tag-current"</if> >全部</div>
+                    </a>
+                </div>
+                <volist name="cate_list" id="cate">
+                    <div class="top-article-tag">
+                        <a href="{:U('Index/index',array('cate'=>$cate['id']))}">
+                            <div <if condition="$_GET['cate'] eq $cate['id']">class="tag-element tag-current" <else />class="tag-element"</if> >{$cate['name']}</div>
+                        </a>
+                    </div>
+                </volist>
+            </div>
+            <div class="row">
+            <volist name="list" id="vo">
+                <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4 article-item fadeInLeft delay0d3s">
+                    <div class="article-panel">
+                        <a href="{:U('Index/single',array('id'=>$vo['id']))}">
+                            <div class="article-cover" style="background-image: url(__ROOT__/Uploads{$vo['cover']})">
+                                <if condition="!empty($vo['is_top'])">
+                                    <div class="featured" title="推荐文章">
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </if>
+                            </div>
+                        </a>
+                        <div class="article-title">
+                            <a href="{:U('Index/single',array('id'=>$vo['id']))}">{$vo['title']}</a>
+                        </div>
+                        <div class="article-brief">
+                            {$vo['brief']}
+                        </div>
+                        <div class="article-info">
+                            <span class="tags">
+                                <if condition="!empty($vo['tags'])">
+                                <i class="fa fa-tags"></i>
+                                <volist name="vo[tags]" id="tag">
+                                    <a href="{:U('Index/index',array('tag'=>$tag))}">{$tag}</a>&nbsp;
+                                </volist>
+                                </if>
+                            </span>
+                            <span class="create-time">
+                                <i class="fa fa-clock-o"></i>
+                                {$vo['create_time']}
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </volist>
+            </div>
+            <nav class="pagination" role="navigation">
+                {$page}
+            </nav>
+        </div>
+    </section>
+</block>
+
+

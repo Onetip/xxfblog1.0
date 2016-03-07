@@ -1,0 +1,57 @@
+<extend name="Public/base" />
+<block name="main">
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-lg-10 col-lg-push-1 main-content">
+                    <article class="post">
+                        <div class="post-head">
+                            <h1 class="post-title">{$info['title']}</h1>
+                            <div class="post-meta">
+                                <time class="post-date" title="{$info['create_time']}">
+                                    <i class="fa fa-clock-o"></i>
+                                    {$info['create_time']}
+                                </time>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            {$info['brief']}
+                            <p>{$info['content']}</p>
+                        </div>
+                        <footer class="post-footer clearfix">
+                            <div class="pull-left tag-list">
+                                <if condition="!empty($info['tags'])">
+                                <i class="fa fa-tags"></i>
+                                <volist name="info['tags']" id="tag">
+                                    <a href="{:U('Index/index',array('tag'=>$tag))}">{$tag}</a>&nbsp;
+                                </volist>
+                                </if>
+                            </div>
+                        </footer>
+                    </article>
+                    <div class="prev-next-wrap clearfix">
+                        <if condition="!empty($neighborlog['prev'])">
+                            <a class="btn btn-default" href="{:U('Index/single',array('id'=>$neighborlog['prev']['id']))}"><i class="fa fa-angle-left fa-fw"></i>{$neighborlog['prev']['title']}</a>
+                            &nbsp;
+                        </if>
+                        <if condition="!empty($neighborlog['next'])">
+                            <a class="btn btn-default" href="{:U('Index/single',array('id'=>$neighborlog['next']['id']))}">{$neighborlog['next']['title']}<i class="fa fa-angle-right fa-fw"></i></a>
+                        </if>
+                    </div>
+                </main>
+                <!--<aside class="col-md-4 sidebar">-->
+                    <!--<div class="widget">-->
+                        <!--<h4 class="title">标签云</h4>-->
+                        <!--<div class="content tag-cloud">-->
+                            <!--<volist name="tags" id="tag">-->
+                                <!--<a href="{:U('Index/index',array('tag'=>$tag['tag_name']))}">{$tag['tag_name']}</a>-->
+                            <!--</volist>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</aside>-->
+            </div>
+        </div>
+    </section>
+</block>
+
+

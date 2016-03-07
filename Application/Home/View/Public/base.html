@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{$title|default=$web['title']}</title>
+    <meta name="description" content="{$web['description']}" />
+    <meta name="keywords" content="{$web['keywords']}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="__IMG__/favicon.jpg">
+    <link rel="stylesheet" href="__COMMON__/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__COMMON__/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="__CSS__/base.css" />
+    <block name="style"></block>
+    <block name="head-script"></block>
+</head>
+<body>
+    <header class="main-header" style="background-image: url(__ROOT__/Uploads{$bg['img']})"></header>
+    <nav class="main-navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="navbar-header">
+                        <span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="menu">
+                            <volist name="nav_list" id="row">
+                                <li <if condition="$active eq $row['active']">class="nav-current"</if> role="presentation">
+                                    <a href="{$row['url']}" <if condition="$row['target'] eq 1">target="_blank"</if>>{$row['name']}</a>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <block name="main"></block>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="widget">
+                        <h4 class="title">最新文章</h4>
+                        <div class="content recent-post">
+                        <volist name="new_list" id="vo">
+                            <div class="recent-single-post">
+                                <a href="{:U('Index/single',array('id'=>$vo['id']))}" class="post-title">{$vo['title']}</a>
+                                <div class="date">发布时间：{$vo['create_time']}</div>
+                            </div>
+                        </volist>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="widget">
+                        <h4 class="title">标签云</h4>
+                        <div class="content tag-cloud">
+                        <volist name="tags" id="tag">
+                            <a href="{:U('Index/index',array('tag'=>$tag['tag_name']))}">{$tag['tag_name']}</a>
+                        </volist>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="widget">
+                        <h4 class="title">友情链接</h4>
+                        <div class="content tag-cloud friend-links">
+                            <volist name="friendly_link" id="fl">
+                                <a href="{$fl['link']}" title="{$fl['title']}" target="_blank">{$fl['title']}</a>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span>Copyright &copy; <a href="http://www.xuexiaofeng.com/">xuexiaofeng.com</a></span> |
+                    <span><a href="http://www.miibeian.gov.cn/" target="_blank">{$web['icp']}</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden">{$web['tj']}</div>
+    <script src="__COMMON__/js/jquery.min.js"></script>
+    <script src="__COMMON__/js/bootstrap.min.js"></script>
+    <block name="script"></block>
+</body>
+</html>
