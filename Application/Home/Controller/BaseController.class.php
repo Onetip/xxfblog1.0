@@ -9,9 +9,6 @@ use \Think\Controller;
  */
 class BaseController extends Controller{
 
-    /**
-     * 每个控制器方法执行前 先执行该方法
-     */
     protected function _initialize(){
         $this->siteStatus();
         $background = D('Background')->randFind();
