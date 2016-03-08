@@ -18,6 +18,7 @@ class ArticleController extends BaseController {
         }
         $param['page_size'] = $this->getPage();
         $param['order'] = 'is_top DESC,create_time DESC';
+        $param['parameter'] = $_REQUEST;
         $list = D('Article')->getList($param);
         $this->assign('list',$list['list']);
         $this->assign('page',$list['page']);
