@@ -44,7 +44,9 @@ class ArticleController extends BaseController {
     }
 
     protected function afterUpdate($result, $request = array()){
-        $this->updateTags($request['tags']);
+        if(!empty($request['tags'])){
+            $this->updateTags($request['tags']);
+        }
         return true;
     }
 
@@ -70,18 +72,20 @@ class ArticleController extends BaseController {
      * @param $tags
      */
     private function updateTags($tags){
-        if(strstr($tags,',')){
-            $arr = explode(',',$tags);
-            foreach($arr as $k=>$v){
-                $tag = M('Tag')->where(array('tag_name'=>$v))->find();
-                if(empty($tag)){
-                    M('Tag')->data(array('tag_name'=>$v))->add();
+        if(!empty($tags)){
+            if(strstr($tags,',')){
+                $arr = explode(',',$tags);
+                foreach($arr as $k=>$v){
+                    $tag = M('Tag')->where(array('tag_name'=>$v))->find();
+                    if(empty($tag)){
+                        M('Tag')->data(array('tag_name'=>$v))->add();
+                    }
                 }
-            }
-        }else{
-            $tag = M('Tag')->where(array('tag_name'=>$tags))->find();
-            if(empty($tag)){
-                M('Tag')->data(array('tag_name'=>$tags))->add();
+            }else{
+                $tag = M('Tag')->where(array('tag_name'=>$tags))->find();
+                if(empty($tag)){
+                    M('Tag')->data(array('tag_name'=>$tags))->add();
+                }
             }
         }
     }
