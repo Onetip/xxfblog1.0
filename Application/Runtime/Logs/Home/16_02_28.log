@@ -1,0 +1,415 @@
+[ 2016-02-28T12:29:55+08:00 ] ::1 /myblog/Document
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.016352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016536s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0518s ]
+SQL: SELECT `status` FROM `xxf_config` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `xxf_background` [ RunTime:0.0345s ]
+SQL: SELECT `img`
+                FROM `xxf_background` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `xxf_background`)-(SELECT MIN(id) FROM `xxf_background`))+(SELECT MIN(id) FROM `xxf_background`)) AS id) AS t2
+                WHERE t1.id >= t2.id AND t1.status = 1
+                ORDER BY t1.id ASC LIMIT 1 [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `xxf_nav` [ RunTime:0.0142s ]
+SQL: SELECT * FROM `xxf_nav` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0502s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0583s ]
+SQL: SELECT * FROM `xxf_tag`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0251s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `xxf_friendly_link` [ RunTime:0.0451s ]
+SQL: SELECT * FROM `xxf_friendly_link` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000533s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000703s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.194470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.194737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.011320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.007129s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007300s ]
+
+[ 2016-02-28T12:29:56+08:00 ] ::1 /myblog/Public/Document/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+
+[ 2016-02-28T12:29:56+08:00 ] ::1 /myblog/Public/Document/images/bg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001075s ]
+
+[ 2016-02-28T12:30:04+08:00 ] ::1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0238s ]
+SQL: SELECT `status` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_background` [ RunTime:0.0521s ]
+SQL: SELECT `img`
+                FROM `xxf_background` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `xxf_background`)-(SELECT MIN(id) FROM `xxf_background`))+(SELECT MIN(id) FROM `xxf_background`)) AS id) AS t2
+                WHERE t1.id >= t2.id AND t1.status = 1
+                ORDER BY t1.id ASC LIMIT 1 [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `xxf_nav` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `xxf_nav` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `xxf_tag`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `xxf_friendly_link` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `xxf_friendly_link` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `index_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY is_top DESC,create_time DESC LIMIT 0,3   [ RunTime:0.0063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000360s ]
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 49 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.106768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106937s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000948s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2016-02-28T16:12:11+08:00 ] ::1 /myblog/Document
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001734s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0071s ]
+SQL: SELECT `status` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_background` [ RunTime:0.0059s ]
+SQL: SELECT `img`
+                FROM `xxf_background` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `xxf_background`)-(SELECT MIN(id) FROM `xxf_background`))+(SELECT MIN(id) FROM `xxf_background`)) AS id) AS t2
+                WHERE t1.id >= t2.id AND t1.status = 1
+                ORDER BY t1.id ASC LIMIT 1 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xxf_nav` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `xxf_nav` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `xxf_tag`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `xxf_friendly_link` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `xxf_friendly_link` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000537s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000702s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.019038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000811s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001229s ]
+
+[ 2016-02-28T16:12:11+08:00 ] ::1 /myblog/Public/Document/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001214s ]
+
+[ 2016-02-28T16:12:11+08:00 ] ::1 /myblog/Public/Document/images/bg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+
+[ 2016-02-28T16:12:17+08:00 ] ::1 /myblog/Document/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001662s ]
+
+[ 2016-02-28T16:12:17+08:00 ] ::1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001233s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0327s ]
+SQL: SELECT `status` FROM `xxf_config` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_background` [ RunTime:0.0954s ]
+SQL: SELECT `img`
+                FROM `xxf_background` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `xxf_background`)-(SELECT MIN(id) FROM `xxf_background`))+(SELECT MIN(id) FROM `xxf_background`)) AS id) AS t2
+                WHERE t1.id >= t2.id AND t1.status = 1
+                ORDER BY t1.id ASC LIMIT 1 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xxf_nav` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `xxf_nav` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0201s ]
+SQL: SELECT * FROM `xxf_tag`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0558s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `xxf_friendly_link` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `xxf_friendly_link` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `index_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY is_top DESC,create_time DESC LIMIT 0,3   [ RunTime:0.0057s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 49 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035802s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000915s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000979s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2016-02-28T16:12:25+08:00 ] ::1 /myblog/Document
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000986s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0531s ]
+SQL: SELECT `status` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_background` [ RunTime:0.0306s ]
+SQL: SELECT `img`
+                FROM `xxf_background` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `xxf_background`)-(SELECT MIN(id) FROM `xxf_background`))+(SELECT MIN(id) FROM `xxf_background`)) AS id) AS t2
+                WHERE t1.id >= t2.id AND t1.status = 1
+                ORDER BY t1.id ASC LIMIT 1 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xxf_nav` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `xxf_nav` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `xxf_tag`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `xxf_friendly_link` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `xxf_friendly_link` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000490s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000645s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.018687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001158s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001310s ]
+
+[ 2016-02-28T16:12:26+08:00 ] ::1 /myblog/Public/Document/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001138s ]
+
+[ 2016-02-28T16:14:43+08:00 ] ::1 /myblog/Document
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001284s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0060s ]
+SQL: SELECT `status` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_background` [ RunTime:0.0060s ]
+SQL: SELECT `img`
+                FROM `xxf_background` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `xxf_background`)-(SELECT MIN(id) FROM `xxf_background`))+(SELECT MIN(id) FROM `xxf_background`)) AS id) AS t2
+                WHERE t1.id >= t2.id AND t1.status = 1
+                ORDER BY t1.id ASC LIMIT 1 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xxf_nav` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `xxf_nav` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `xxf_tag`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `xxf_friendly_link` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `xxf_friendly_link` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000571s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000793s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000744s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000994s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001145s ]
+
+[ 2016-02-28T16:14:43+08:00 ] ::1 /myblog/Public/Document/images/bg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001076s ]
+
+[ 2016-02-28T16:14:43+08:00 ] ::1 /myblog/Public/Document/images/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000176s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001588s ]
+
+[ 2016-02-28T16:14:45+08:00 ] ::1 /myblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001798s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.1004s ]
+SQL: SELECT `status` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_background` [ RunTime:0.0280s ]
+SQL: SELECT `img`
+                FROM `xxf_background` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `xxf_background`)-(SELECT MIN(id) FROM `xxf_background`))+(SELECT MIN(id) FROM `xxf_background`)) AS id) AS t2
+                WHERE t1.id >= t2.id AND t1.status = 1
+                ORDER BY t1.id ASC LIMIT 1 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xxf_nav` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `xxf_nav` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `xxf_tag`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `xxf_friendly_link` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `xxf_friendly_link` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `index_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY is_top DESC,create_time DESC LIMIT 0,3   [ RunTime:0.0075s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000337s ]
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 49 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Undefined index: category D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 54 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+NOTIC: [8] Use of undefined constant tags - assumed 'tags' D:\wamp\www\myblog\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 77 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.041685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041856s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001784s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002005s ]
+
+[ 2016-02-28T16:14:50+08:00 ] ::1 /myblog/Index-single-id-46
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000088s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001217s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:3.6918s ]
+SQL: SELECT `status` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_background` [ RunTime:0.0472s ]
+SQL: SELECT `img`
+                FROM `xxf_background` AS t1 JOIN (SELECT ROUND(RAND() * ((SELECT MAX(id) FROM `xxf_background`)-(SELECT MIN(id) FROM `xxf_background`))+(SELECT MIN(id) FROM `xxf_background`)) AS id) AS t2
+                WHERE t1.id >= t2.id AND t1.status = 1
+                ORDER BY t1.id ASC LIMIT 1 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xxf_nav` [ RunTime:0.0975s ]
+SQL: SELECT * FROM `xxf_nav` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0175s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `status` = 1 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `xxf_tag`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art WHERE art.status = 1 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Common\Model\ArticleModel.class.php 第 19 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.status = 1 ORDER BY create_time DESC LIMIT 0,3   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `xxf_friendly_link` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `xxf_friendly_link` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SELECT art.*,art_cate.name cate_name FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  WHERE art.id = '46' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`title` FROM `xxf_article` WHERE `create_time` > '1453253420' AND `status` = 1 ORDER BY create_time LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`title` FROM `xxf_article` WHERE `create_time` < '1453253420' AND `status` = 1 ORDER BY create_time DESC LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000547s ]
+NOTIC: [8] Undefined variable: active D:\wamp\www\myblog\Application\Runtime\Cache\Home\50769c75c60b8e3fa473828c519cfee2.php 第 34 行.
+NOTIC: [8] Undefined variable: active D:\wamp\www\myblog\Application\Runtime\Cache\Home\50769c75c60b8e3fa473828c519cfee2.php 第 34 行.
+NOTIC: [8] Undefined variable: active D:\wamp\www\myblog\Application\Runtime\Cache\Home\50769c75c60b8e3fa473828c519cfee2.php 第 34 行.
+NOTIC: [8] Undefined variable: active D:\wamp\www\myblog\Application\Runtime\Cache\Home\50769c75c60b8e3fa473828c519cfee2.php 第 34 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.066053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000905s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001499s ]
+

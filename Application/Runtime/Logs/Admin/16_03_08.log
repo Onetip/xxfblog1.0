@@ -1,0 +1,1253 @@
+[ 2016-03-08T13:23:15+08:00 ] ::1 /myblog/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001763s ]
+
+[ 2016-03-08T13:23:15+08:00 ] ::1 /myblog/Admin-Login-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001759s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000284s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000662s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\myblog\Application\Runtime\Cache\Admin\32ec6c906c117a7c2bf504769276d87a.php 第 6 行.
+NOTIC: [8] Undefined variable: description D:\wamp\www\myblog\Application\Runtime\Cache\Admin\32ec6c906c117a7c2bf504769276d87a.php 第 7 行.
+NOTIC: [8] Undefined variable: keywords D:\wamp\www\myblog\Application\Runtime\Cache\Admin\32ec6c906c117a7c2bf504769276d87a.php 第 8 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.077533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.004010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004583s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004221s ]
+
+[ 2016-03-08T13:23:18+08:00 ] ::1 /myblog/Admin-Login-verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002957s ]
+
+[ 2016-03-08T13:23:23+08:00 ] ::1 /myblog/Admin-Login-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+SQL: SHOW COLUMNS FROM `xxf_user` [ RunTime:0.0439s ]
+SQL: SELECT * FROM `xxf_user` WHERE `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-03-08T13:23:23+08:00 ] ::1 /myblog/Admin-Index-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001685s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035519s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001227s ]
+
+[ 2016-03-08T13:23:27+08:00 ] ::1 /myblog/Admin-Article-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001233s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0162s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0135s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 39 行.
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 45 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  ORDER BY is_top DESC,create_time DESC LIMIT 0,15   [ RunTime:0.1054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000261s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000478s ]
+NOTIC: [8] Undefined index: title D:\wamp\www\myblog\Application\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 89 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.080312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002192s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002651s ]
+
+[ 2016-03-08T13:23:54+08:00 ] ::1 /myblog/Admin-Login-logOut
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001481s ]
+
+[ 2016-03-08T13:23:54+08:00 ] ::1 /myblog/Admin-Login-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001280s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+NOTIC: [8] Undefined variable: title D:\wamp\www\myblog\Application\Runtime\Cache\Admin\32ec6c906c117a7c2bf504769276d87a.php 第 6 行.
+NOTIC: [8] Undefined variable: description D:\wamp\www\myblog\Application\Runtime\Cache\Admin\32ec6c906c117a7c2bf504769276d87a.php 第 7 行.
+NOTIC: [8] Undefined variable: keywords D:\wamp\www\myblog\Application\Runtime\Cache\Admin\32ec6c906c117a7c2bf504769276d87a.php 第 8 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.013455s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001230s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001374s ]
+
+[ 2016-03-08T13:23:54+08:00 ] ::1 /myblog/Admin-Login-verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001856s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001719s ]
+
+[ 2016-03-08T13:24:02+08:00 ] ::1 /myblog/Admin-Login-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000972s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `xxf_user` [ RunTime:0.0622s ]
+SQL: SELECT * FROM `xxf_user` WHERE `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-03-08T13:24:02+08:00 ] ::1 /myblog/Admin-Index-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001266s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020421s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000931s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001072s ]
+
+[ 2016-03-08T13:24:06+08:00 ] ::1 /myblog/Admin-Article-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000956s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001107s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0069s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0101s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 39 行.
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 45 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  ORDER BY is_top DESC,create_time DESC LIMIT 0,15   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+NOTIC: [8] Undefined index: title D:\wamp\www\myblog\Application\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 89 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.033722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000843s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000981s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2016-03-08T13:24:10+08:00 ] ::1 /myblog/Admin-Article-add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001220s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 0 ORDER BY sort DESC  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 49 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 56 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 52 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 51 ORDER BY sort DESC  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 166 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 166 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000229s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000456s ]
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 88 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 92 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 113 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 119 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 125 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 132 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:1.135154s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.135575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001599s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001869s ]
+
+[ 2016-03-08T13:25:18+08:00 ] ::1 /myblog/Admin-Article-update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.2766s ]
+SQL: INSERT INTO `xxf_article` (`id`,`title`,`cate_id`,`brief`,`content`,`tags`,`create_time`,`author`) VALUES ('0','asdasdas','49','asdsadas','asdasda','','1457414717','薛晓峰') [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000310s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000789s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.070679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071124s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002908s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001831s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002055s ]
+
+[ 2016-03-08T13:25:19+08:00 ] ::1 /myblog/Admin-Article-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001413s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0058s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0066s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 39 行.
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 45 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  ORDER BY is_top DESC,create_time DESC LIMIT 0,15   [ RunTime:0.0054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000313s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000564s ]
+NOTIC: [8] Undefined index: title D:\wamp\www\myblog\Application\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 89 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000915s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001052s ]
+
+[ 2016-03-08T13:26:27+08:00 ] ::1 /myblog/Admin-Article-add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002505s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 0 ORDER BY sort DESC  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 49 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 56 ORDER BY sort DESC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 52 ORDER BY sort DESC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 51 ORDER BY sort DESC  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 166 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 166 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 88 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 92 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 113 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 119 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 125 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 132 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001602s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001931s ]
+
+[ 2016-03-08T13:26:34+08:00 ] ::1 /myblog/Admin-Article-update
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001355s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0390s ]
+SQL: INSERT INTO `xxf_article` (`id`,`title`,`cate_id`,`brief`,`content`,`tags`,`create_time`,`author`) VALUES ('0','阿斯顿撒打算','49','撒旦撒旦是','asda是','asdsa','1457414794','薛晓峰') [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `xxf_tag` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `xxf_tag` WHERE `tag_name` = 'asdsa' LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `xxf_tag` (`tag_name`) VALUES ('asdsa') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.010991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011146s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2016-03-08T13:26:35+08:00 ] ::1 /myblog/Admin-Article-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001605s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0068s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0058s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 39 行.
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 45 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  ORDER BY is_top DESC,create_time DESC LIMIT 0,15   [ RunTime:0.0057s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8] Undefined index: title D:\wamp\www\myblog\Application\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 89 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.034771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001439s ]
+
+[ 2016-03-08T17:45:35+08:00 ] ::1 /myblog/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001548s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020427s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001148s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001152s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001284s ]
+
+[ 2016-03-08T17:45:37+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0068s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000299s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000588s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.076698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001636s ]
+
+[ 2016-03-08T17:46:09+08:00 ] ::1 /myblog/Admin-Message-onOff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001247s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0064s ]
+SQL: UPDATE `xxf_message` SET `is_show`='1' WHERE `id` = 18 [ RunTime:0.0005s ]
+NOTIC: [2] unlink(./Application/Runtime/Temp/xxf_335bcdfa6ab5f0170de5a0e7e8f7d864.php): No such file or directory D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Cache\Driver\File.class.php 第 157 行.
+
+[ 2016-03-08T17:47:14+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001156s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001346s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0077s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.031114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001515s ]
+
+[ 2016-03-08T17:47:16+08:00 ] ::1 /myblog/Admin-Message-onOff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0064s ]
+SQL: UPDATE `xxf_message` SET `is_show`='1' WHERE `id` = 19 [ RunTime:0.0005s ]
+NOTIC: [2] unlink(./Application/Runtime/Temp/xxf_335bcdfa6ab5f0170de5a0e7e8f7d864.php): No such file or directory D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Cache\Driver\File.class.php 第 157 行.
+
+[ 2016-03-08T19:58:23+08:00 ] ::1 /myblog/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000829s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-03-08T19:58:25+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0068s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000350s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000760s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000902s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2016-03-08T19:58:30+08:00 ] ::1 /myblog/Admin-Message-onOff
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001248s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0064s ]
+SQL: UPDATE `xxf_message` SET `is_show`='1' WHERE `id` = 20 [ RunTime:0.0006s ]
+NOTIC: [2] unlink(./Application/Runtime/Temp/xxf_335bcdfa6ab5f0170de5a0e7e8f7d864.php): No such file or directory D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Cache\Driver\File.class.php 第 157 行.
+
+[ 2016-03-08T20:01:05+08:00 ] ::1 /myblog/Admin-Article-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0083s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_article` [ RunTime:0.0094s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_article art LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: where D:\wamp\www\myblog\Application\Admin\Model\ArticleModel.class.php 第 45 行.
+SQL: SELECT art.*,art_cate.name cate_name,art_cate.status cate_status FROM xxf_article art LEFT JOIN xxf_article_category art_cate ON art_cate.id = art.cate_id AND art_cate.status < 9  ORDER BY is_top DESC,create_time DESC LIMIT 0,15   [ RunTime:0.0063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000356s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] Undefined index: title D:\wamp\www\myblog\Application\Runtime\Cache\Admin\7a4184ffe8f804b12b2e7f8851dd8f7d.php 第 89 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.044775s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044987s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000888s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001217s ]
+
+[ 2016-03-08T20:01:05+08:00 ] ::1 /myblog/Admin-Article-add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `xxf_article_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 0 ORDER BY sort DESC  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 49 ORDER BY sort DESC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 56 ORDER BY sort DESC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 52 ORDER BY sort DESC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `xxf_article_category` WHERE `parent_id` = 51 ORDER BY sort DESC  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 166 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 166 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+NOTIC: [8] Undefined index:  D:\wamp\www\myblog\ThinkPHP_3.2.3\Library\Think\Tree.class.php 第 131 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 88 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 92 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 113 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 119 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 125 行.
+NOTIC: [8] Undefined variable: row D:\wamp\www\myblog\Application\Runtime\Cache\Admin\ffdcd5de2d6ef23c1706a32611505a17.php 第 132 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.024398s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024544s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000984s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001308s ]
+
+[ 2016-03-08T20:01:23+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000088s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001131s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0067s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000328s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030026s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000751s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000905s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000926s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001056s ]
+
+[ 2016-03-08T20:01:25+08:00 ] ::1 /myblog/Admin-Message-replyList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0068s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` <> 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` <> 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.064108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000829s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000910s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001050s ]
+
+[ 2016-03-08T20:01:25+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002270s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0061s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.031198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031393s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000832s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001056s ]
+
+[ 2016-03-08T20:22:49+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001900s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0067s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000356s ]
+NOTIC: [8] Undefined variable: smilies D:\wamp\www\myblog\Application\Runtime\Cache\Admin\e1ad611a04673ac9fc78d17e28cd370b.php 第 176 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.039821s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000899s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001325s ]
+
+[ 2016-03-08T20:23:20+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001966s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0077s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000409s ]
+NOTIC: [8] Undefined variable: smilies D:\wamp\www\myblog\Application\Runtime\Cache\Admin\e1ad611a04673ac9fc78d17e28cd370b.php 第 176 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.032055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001898s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001871s ]
+
+[ 2016-03-08T20:24:25+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0073s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000325s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030054s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000845s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001079s ]
+
+[ 2016-03-08T20:24:43+08:00 ] ::1 /myblog/Admin-Message-reply
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001671s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0078s ]
+SQL: INSERT INTO `xxf_message` (`uid`,`parent_id`,`nickname`,`email`,`head`,`web_url`,`content`,`province`,`city`,`ip`,`create_time`) VALUES ('1','20','薛晓峰','','','','
+                            <img src=\"/myblog/Public/Home/img/baidu/f1.png\">
+                        
+                            <img src=\"/myblog/Public/Home/img/baidu/f18.png\">
+                        ','','','','1457439878') [ RunTime:0.0005s ]
+SQL: UPDATE `xxf_message` SET `status`='1' WHERE `id` = 20 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `xxf_message` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2016-03-08T20:24:43+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000089s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001091s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0075s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028406s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000891s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001033s ]
+
+[ 2016-03-08T20:24:43+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001838s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0063s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000382s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001301s ]
+
+[ 2016-03-08T20:24:46+08:00 ] ::1 /myblog/Admin-Message-replyList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001223s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0058s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` <> 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` <> 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000865s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001105s ]
+
+[ 2016-03-08T20:24:47+08:00 ] ::1 /myblog/Admin-Message-replyList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0078s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` <> 0 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` <> 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000329s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000908s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001860s ]
+
+[ 2016-03-08T20:25:12+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001905s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0075s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000337s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000584s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001080s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001229s ]
+
+[ 2016-03-08T20:25:13+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0077s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0092s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000305s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000539s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.034227s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034387s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000873s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001685s ]
+
+[ 2016-03-08T20:25:47+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001401s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0080s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0087s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000346s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000900s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001712s ]
+
+[ 2016-03-08T20:26:03+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001455s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0068s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030880s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001471s ]
+
+[ 2016-03-08T20:26:07+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001352s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0064s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000884s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2016-03-08T20:26:34+08:00 ] ::1 /myblog/Admin-Message-reply
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001994s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0092s ]
+SQL: INSERT INTO `xxf_message` (`uid`,`parent_id`,`nickname`,`email`,`head`,`web_url`,`content`,`province`,`city`,`ip`,`create_time`) VALUES ('1','20','薛晓峰','','','','asdas','','','','1457439994') [ RunTime:0.0006s ]
+SQL: UPDATE `xxf_message` SET `status`='1' WHERE `id` = 20 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `xxf_message` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2016-03-08T20:26:35+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002028s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0067s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000867s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001523s ]
+
+[ 2016-03-08T20:26:37+08:00 ] ::1 /myblog/Admin-Message-replyList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0079s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` <> 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` <> 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000383s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029397s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000912s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001057s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001136s ]
+
+[ 2016-03-08T20:26:39+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0080s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000461s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.033117s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001221s ]
+
+[ 2016-03-08T20:26:48+08:00 ] ::1 /myblog/Admin-Message-reply
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000978s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0076s ]
+SQL: INSERT INTO `xxf_message` (`uid`,`parent_id`,`nickname`,`email`,`head`,`web_url`,`content`,`province`,`city`,`ip`,`create_time`) VALUES ('1','20','薛晓峰','','','','
+                            <img src=\"/myblog/Public/Home/img/baidu/f5.png\">呵呵','','','','1457440006') [ RunTime:0.0005s ]
+SQL: UPDATE `xxf_message` SET `status`='1' WHERE `id` = 20 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `xxf_message` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-03-08T20:26:48+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0069s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0091s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.031682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001250s ]
+
+[ 2016-03-08T20:26:49+08:00 ] ::1 /myblog/Admin-Message-replyList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001683s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0068s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` <> 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` <> 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000354s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029465s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001190s ]
+
+[ 2016-03-08T20:27:00+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0075s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.030906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000931s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001067s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001203s ]
+
+[ 2016-03-08T20:27:02+08:00 ] ::1 /myblog/Admin-Message-replyList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001849s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002062s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0061s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0076s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` <> 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` <> 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028776s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000961s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001102s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001215s ]
+
+[ 2016-03-08T20:27:42+08:00 ] ::1 /myblog/Admin-Message-index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLite [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `xxf_config` [ RunTime:0.0075s ]
+SQL: SELECT `admin_page` FROM `xxf_config` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `xxf_message` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM xxf_message m WHERE `parent_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parameter D:\wamp\www\myblog\Application\Admin\Model\MessageModel.class.php 第 18 行.
+SQL: SELECT m.* FROM xxf_message m WHERE `parent_id` = 0 ORDER BY create_time DESC LIMIT 0,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000331s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000669s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.040719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040897s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001303s ]
+
