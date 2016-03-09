@@ -36,10 +36,7 @@ pre{padding:0;background:none;border:none;}
 .main-navigation .menu li ul li a{line-height:2.5em;color:#505050;}
 .main-navigation .menu li ul:hover > a{color:#f4645f;}
 .main-navigation .menu li:hover ul{visibility:visible;opacity:1;filter:alpha(opacity=100);top:100%;}
-@media (max-width:767px){.main-navigation{text-align:left;}
-    .main-navigation .menu li{display:block;}
-    .main-navigation .menu li:hover > a{color:#f4645f;text-decoration:none;}
-    .main-navigation .menu li ul{visibility:visible;padding:0px 0px 0px 20px;margin:0;position:relative;top:0;width:100%;opacity:1;filter:alpha(opacity=100);}}.navbar-header{text-align:center;}
+@media (max-width:767px){.main-navigation{text-align:left;} .main-navigation .menu li{display:block;} .main-navigation .menu li:hover > a{color:#f4645f;text-decoration:none;} .main-navigation .menu li ul{visibility:visible;padding:0px 0px 0px 20px;margin:0;position:relative;top:0;width:100%;opacity:1;filter:alpha(opacity=100);}}.navbar-header{text-align:center;}
 .navbar-header i{height:56px;line-height:56px;font-size:2em;cursor:pointer;}
 @media (min-width:768px){.nav-toggle-button{display:none;}}.top-tags{padding-left:15px;margin-bottom:30px;}
 .top-tags .top-article-tag{display:inline-block;margin-left:5px;}
@@ -50,16 +47,7 @@ pre{padding:0;background:none;border:none;}
 .article-item{position:relative;display:inline-block;}
 .article-item .article-panel{background-color:#fff;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;-webkit-box-shadow:0 0 2px #ddd;-moz-box-shadow:0 0 2px #ddd;box-shadow:0 0 2px #ddd;overflow:hidden;width:100%;margin-bottom:25px}
 .article-item .article-panel .article-cover{width:100%;height:0;padding-bottom:55%;background-position:center center;background-size:cover;background-repeat:no-repeat;position:relative;}
-@-webkit-keyframes rotate{0%{-webkit-transform:rotate(0deg)}
-    100%,25%,50%,75%{-webkit-transform:rotate(360deg)}}@-moz-keyframes rotate{0%{-moz-transform:rotate(0deg)}
-                                                           100%,25%,50%,75%{-moz-transform:rotate(360deg)}}@keyframes rotate{0%{transform:rotate(0deg)}
-                                                                                                               100%,25%,50%,75%{transform:rotate(360deg)}}@-webkit-keyframes rotate-all{0%{-webkit-transform:rotate(0deg)}
-                                                                                                                                                              100%{-webkit-transform:rotate(360deg)}}@-moz-keyframes rotate-all{0%{-moz-transform:rotate(0deg)}
-                                                                                                                                                                                                         100%{-moz-transform:rotate(360deg)}}@keyframes rotate-all{0%{transform:rotate(0deg)}
-                                                                                                                                                                                                                                                 100%{transform:rotate(360deg)}}@-webkit-keyframes nav-slide{0%{-webkit-transform:translateX(-11px)}
-                                                                                                                                                                                                                                                                                    100%,50%,70%{-webkit-transform:translateX(0px)}}@-moz-keyframes nav-slide{0%{-moz-transform:translateX(-11px)}
-                                                                                                                                                                                                                                                                                                                                        100%,50%,70%{-moz-transform:translateX(0px)}}@keyframes nav-slide{0%{transform:translateX(-11px)}
-                                                                                                                                                                                                                                                                                                                                                                                         100%,50%,70%{transform:translateX(0px)}}.article-item .article-panel .article-cover:before{content:"";position:absolute;width:80px;height:198px;top:0;left:-130px;overflow:hidden;background:-moz-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);background:-webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(50%,rgba(255,255,255,.2)),color-stop(100%,rgba(255,255,255,0)));background:-webkit-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);background:-o-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);-webkit-transform:skewX(-25deg);-moz-transform:skewX(-25deg)}
+@-webkit-keyframes rotate{0%{-webkit-transform:rotate(0deg)} 100%,25%,50%,75%{-webkit-transform:rotate(360deg)}}@-moz-keyframes rotate{0%{-moz-transform:rotate(0deg)} 100%,25%,50%,75%{-moz-transform:rotate(360deg)}}@keyframes rotate{0%{transform:rotate(0deg)} 100%,25%,50%,75%{transform:rotate(360deg)}}@-webkit-keyframes rotate-all{0%{-webkit-transform:rotate(0deg)} 100%{-webkit-transform:rotate(360deg)}}@-moz-keyframes rotate-all{0%{-moz-transform:rotate(0deg)} 100%{-moz-transform:rotate(360deg)}}@keyframes rotate-all{0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)}}@-webkit-keyframes nav-slide{0%{-webkit-transform:translateX(-11px)} 100%,50%,70%{-webkit-transform:translateX(0px)}}@-moz-keyframes nav-slide{0%{-moz-transform:translateX(-11px)} 100%,50%,70%{-moz-transform:translateX(0px)}}@keyframes nav-slide{0%{transform:translateX(-11px)} 100%,50%,70%{transform:translateX(0px)}}.article-item .article-panel .article-cover:before{content:"";position:absolute;width:80px;height:198px;top:0;left:-130px;overflow:hidden;background:-moz-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);background:-webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(50%,rgba(255,255,255,.2)),color-stop(100%,rgba(255,255,255,0)));background:-webkit-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);background:-o-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);-webkit-transform:skewX(-25deg);-moz-transform:skewX(-25deg)}
 .article-item .article-panel .article-cover:hover::before{-webkit-transition:left 0.7s;-moz-transition:left 0.7s;transition:left 0.7s;left:400px}
 .article-item .article-panel .article-cover .featured{position:absolute;background:#f4645f;color:#fff;text-align:center;top:-12px;right:-32px;width:80px;height:40px;line-height:54px;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);}
 .article-item .article-panel .article-cover .featured i{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);}
@@ -131,11 +119,7 @@ pre{padding:0;background:none;border:none;}
 .post-content iframe{display:block;max-width:100%;margin-bottom:30px;}
 .post-content figure iframe{margin:auto;}
 .post-content table pre{margin:0;padding:0;border:none;background:none;}
-@media (min-width:1100px){.post-content blockquote{margin-left:-24px;padding-left:20px;border-width:4px;}
-    .post-content blockquote blockquote{margin-left:0;}
-    .post-content figure img{margin:0 0 4px;}
-    .post-content figure figcaption{position:absolute;left:-172px;width:150px;top:0;text-align:right;margin-top:0;}
-    .post-content figure figcaption:before{width:25%;margin-left:75%;border-top:1px solid #dededc;display:block;content:"";margin-bottom:10px;}}.pagination{margin:10px 0 35px 0;text-align:center;display:block;}
+@media (min-width:1100px){.post-content blockquote{margin-left:-24px;padding-left:20px;border-width:4px;} .post-content blockquote blockquote{margin-left:0;} .post-content figure img{margin:0 0 4px;} .post-content figure figcaption{position:absolute;left:-172px;width:150px;top:0;text-align:right;margin-top:0;} .post-content figure figcaption:before{width:25%;margin-left:75%;border-top:1px solid #dededc;display:block;content:"";margin-bottom:10px;}}.pagination{margin:10px 0 35px 0;text-align:center;display:block;}
 .pagination a{text-align:center;display:inline-block;color:#ffffff;background:#f4645f;border-radius:2px;}
 .pagination a a:hover{background:#505050;text-decoration:none;color:#ffffff;}
 .pagination a i{width:36px;height:36px;line-height:36px;}
@@ -191,7 +175,15 @@ pre{padding:0;background:none;border:none;}
 .copyright{background:#111;font-size:13px;text-align:center;color:#555555;padding-top:28px;padding-bottom:28px;border-top:1px solid #303030;}
 .copyright span{margin:0 .5em;}
 .copyright a{color:#555555;}
-
+#back_to_top{position:fixed;right:10px;bottom:10px;background:rgba(244,100,95,0.6);color:#ffffff;text-align:center;border-radius:2px;z-index:1;display:none;}
+#back_to_top:hover{background:#f4645f;}
+#back_to_top i{width:30px;height:30px;line-height:30px;}
+.rotate{display:block;position:fixed;z-index:100;top:15px;right:15px;}
+.rotate .rotate-icon{width:18px;height:18px;box-sizing:border-box;border:2px solid transparent;border-top-color:#f4645f;border-left-color:#f4645f;border-radius:50%;-webkit-animation:xxf-rotate 400ms linear infinite;animation:xxf-rotate 400ms linear infinite;}
+@-webkit-keyframes xxf-rotate{0%{-webkit-transform:rotate(0deg);} 100%{-webkit-transform:rotate(360deg);}}@keyframes xxf-rotate{0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);}}.progress{position:fixed;z-index:99;left:0;width:0;height:2px;border-radius:0 1px 1px 0;-webkit-transition:all 1000ms;transition:all 1000ms}
+.progress-top{width:1%;top:0;background:#f4645f;box-shadow:0 0 10px #f4645f}
+.progress-top.done,.rotate.done{opacity:0}
+.progress-bottom{top:50px;background:#f4645f;box-shadow:0 0 10px #f4645f}
 .twitter-post{padding: 15px;}
 .twitter-post .post-content{margin: 0;}
 .twitter-post .post-content p{margin-bottom: 0px;}
@@ -199,13 +191,41 @@ pre{padding:0;background:none;border:none;}
 .music-post{padding: 0;}
 .music-post .post-content{margin: 0;}
 .message .message-text{background: #ffffff; padding: 20px; margin-bottom: 20px;-webkit-box-shadow:0 0 2px #ddd;-moz-box-shadow:0 0 2px #ddd;box-shadow:0 0 2px #ddd;}
-.message .message-text textarea{margin-bottom: 10px; }
+.message .message-text textarea{margin-bottom: 10px;}
 .message .message-text .form-inline{float: right;}
-.message .message-content{ margin-left: 80px; position: relative;}
+.message .message-content{margin-left: 80px; position: relative;}
 .message .message-content .message-head,.message .message-reply .message-head{position: absolute; left: -80px; width: 60px; height: 60px;}
-.message .message-content .message-head img,.message .message-reply .message-head img{display: block;  width: 60px; height: 60px; -webkit-transition:.8s;-moz-transition:.8s;}
-.message .message-content .message-head img:hover,.message .message-reply .message-head img:hover{transform:rotate(720deg);-webkit-transform:rotate(720deg);-moz-transform:rotate(720deg)}
+.message .message-content .message-head img,.message .message-reply .message-head img{display: block; width: 60px; height: 60px; -webkit-transition:.8s;-moz-transition:.8s;}
+.message .message-content .message-head img:hover,.message .message-reply .message-head img:hover,.friend img:hover{transform:rotate(720deg);-webkit-transform:rotate(720deg);-moz-transform:rotate(720deg)}
 .message .message-content .post-footer,.message-reply .post-footer{margin-bottom: 10px;}
 .message .hr{margin-left: 80px;}
 .message .message-reply{padding-left: 80px; position: relative}
 .message .message-reply .message-head{left: 0px;}
+.other-login{float:left;margin-bottom: 10px;overflow: hidden;}
+.other-login img.qq{width: 16px; height: 16px}
+.other-login a{padding-left: 10px;}
+.other-login img{float:left;display: block; width: 30px; height: 30px; -webkit-transition:.8s;-moz-transition:.8s;}
+.friend{padding-bottom: 40px;}
+.friend h1{background: #fff; font-size: 18px; padding: 10px;}
+.friend img{width: 80px; height: 80px;padding:5px;-webkit-transition:.8s;-moz-transition:.8s;}
+.git_url{background: #fff; padding:10px; margin-bottom: 20px;}
+.textarea-box{position: relative;}
+#textarea{min-height:100px;margin-bottom:10px; vertical-align:middle;}
+#smilies{float: left; padding-left: 2px; position: absolute; left: 10px; bottom: 5px; z-index: 99;}
+#smilies-box ul,.smilie,.smilies-icon{display: block}
+#smilies .smilies-icon{width: 22px; height: 22px; background: url(../img/bq.png) no-repeat; cursor: pointer;}
+.smilie{width: 25px; height: 25px;}
+.dropdown-arrow1, .dropdown-arrow2{position: absolute; left: 7px; z-index: 1; width: 0; height: 0; border-color: transparent; border-style: dashed dashed solid; border-width: 0 8px 8px}
+.dropdown-arrow1{top: 36px; border-bottom-color: #ccc; border-bottom-color: rgba(0,0,0,.2)}
+.dropdown-arrow2{top: 37px; border-bottom-color: #fff}
+#smilies .dropdown-arrow1{top: 28px;}
+#smilies .dropdown-arrow2{top: 29px;}
+.submenu{position: absolute; top: 44px; left: 0; overflow: hidden; padding: 25px; width: 35pc; border: 1px solid #ccc; border-color: rgba(0,0,0,.2); border-radius: 2px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.2)}
+#smilies-box{top: 36px; left: -5px; padding: 10px; width: 360px;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;}
+#smilies-box ul li{margin: 0 -1px -1px 0; padding: 5px; width: 25px; height: 25px; border: 1px solid #eee}
+#smilies-box ul li:hover{background: #f0f0f0}
+.inline-ul{font-size: 0; margin: 0; padding: 0;}
+.inline-ul .inline-li{vertical-align: top; word-spacing: normal; letter-spacing: normal; font-size: 9pt}
+.inline-li{display: inline-block;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;}
+.dropdown.selected .smilies-box{display: block}
+.smilies-box{display: none}

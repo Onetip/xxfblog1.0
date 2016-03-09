@@ -16,6 +16,7 @@ class MessageController extends BaseController {
         $list = D('Message')->getList($param);
         $this->assign('list',$list['list']);
         $this->assign('page',$list['page']);
+        $this->assign('smilies',$this->createHtml());
         $this->display();
 	}
 
@@ -106,5 +107,21 @@ class MessageController extends BaseController {
         $mail->MsgHTML($body);//邮件主体
         $mail->IsHTML(true);
         return $mail->Send() ? true : $mail->ErrorInfo;
+    }
+
+    private function createHtml(){
+        $html = '';
+        for($i=1;$i<=30;$i++){
+            $html .='<li class="inline-li">';
+            if($i == 30){
+                $html .='<a href="javascript:;" class="smilie smilie-close">';
+            }else{
+                $html .='<a href="javascript:;" class="smilie smilie-click">';
+            }
+            $html .='<img src="'.__ROOT__.'/Public/Home/img/baidu/f'.$i.'.png">
+                        </a>
+                    </li>';
+        }
+        return $html;
     }
 }

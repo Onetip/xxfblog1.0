@@ -8,12 +8,14 @@
     <meta name="keywords" content="{$web['keywords']}">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="qc:admins" content="03473466076055011765676375" />
     <link rel="shortcut icon" href="__IMG__/favicon.jpg">
     <link rel="stylesheet" href="__COMMON__/css/bootstrap.min.css" />
     <link rel="stylesheet" href="__COMMON__/css/font-awesome.min.css" />
     <link rel="stylesheet" href="__CSS__/base.css" />
     <block name="style"></block>
     <block name="head-script"></block>
+    <script>window.onload=function(){window.loaded=!0};</script>
 </head>
 <body>
     <header class="main-header" style="background-image: url(__ROOT__/Uploads{$bg['img']})"></header>
@@ -90,9 +92,15 @@
             </div>
         </div>
     </div>
+    <div id="loadProgress" class="progress progress-top"></div>
+    <div class="rotate" id="rotate">
+        <div class="rotate-icon"></div>
+    </div>
+    <a href="#" id="back_to_top"><i class="fa fa-angle-up"></i></a>
     <div class="hidden">{$web['tj']}</div>
     <script src="__COMMON__/js/jquery.min.js"></script>
     <script src="__COMMON__/js/bootstrap.min.js"></script>
+    <script src="__JS__/base.js"></script>
     <block name="script"></block>
 </body>
 </html>

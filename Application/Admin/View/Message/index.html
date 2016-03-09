@@ -89,7 +89,21 @@
                     <h4 class="modal-title" id="myModalLabel">回复内容</h4>
                 </div>
                <div class="modal-body">
-                   <textarea id="reply_desc" class="form-control" style="width: 100%"></textarea>
+                   <div class="textarea-box">
+                       <div id="textarea" class="form-control" contenteditable="true" tabindex="4"></div>
+                       <div id="smilies" class="dropdown">
+                           <span class="smilies-icon"></span>
+                           <div class="smilies-box">
+                               <div class="dropdown-arrow1"></div>
+                               <div class="dropdown-arrow2"></div>
+                               <div id="smilies-box" class="submenu">
+                                   <ul class="inline-ul">
+                                       {$smilies}
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                </div>
                 <div class="modal-footer">
                     <input type="hidden" value="" id="id">
@@ -103,12 +117,25 @@
 </block>
 <block name="script">
     <script>
+        $('.smilie-close').click(function(){
+            $('#smilies').removeClass('selected');
+        });
+        $('.smilies-icon').click(function(){
+            $('#smilies').addClass('selected');
+        });
+
+        $('.smilie-click').click(function(){
+            var _this = $(this);
+            $('#textarea').append(_this.html());
+            $('#smilies').removeClass('selected');
+        });
+
         $('.reply').click(function(){
             $('#id').val($(this).data('id'));
         });
         $('.btn-primary').click(function(){
             var id = $('#id').val();
-            var reply_desc = $('#reply_desc').val();
+            var reply_desc = $('#textarea').html();
             if(reply_desc == ''){
                 alert('请填写回复内容！'); return false;
             }

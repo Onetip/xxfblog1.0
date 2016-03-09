@@ -5,20 +5,51 @@
             <div class="row">
                 <main class="col-lg-10 col-lg-push-1 message">
                     <div class="message-text clearfix">
-                        <textarea class="form-control has-error" rows="3" id="content"></textarea>
-                        <div class="form-inline">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="nickname" placeholder="昵称(必填">
+                        <div class="textarea-box">
+                            <div id="textarea" class="form-control" contenteditable="true" tabindex="4"></div>
+                            <div id="smilies" class="dropdown">
+                                <span class="smilies-icon"></span>
+                                <div class="smilies-box">
+                                    <div class="dropdown-arrow1"></div>
+                                    <div class="dropdown-arrow2"></div>
+                                    <div id="smilies-box" class="submenu">
+                                        <ul class="inline-ul">
+                                            {$smilies}
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <if condition="COOKIE('nickname') eq ''">
+                            <img src="__IMG__/Connect_logo_1.png" class="qq">
+                            <a href="{:U('Login/login',array('type'=>'qq'))}">QQ登陆</a>
+                        <else />
+                            <div class="other-login">
+                                <img src="{$head}" class="img-circle">
+                                <a>{$nickname}</a>&nbsp;
+                                <a href="{:U('Login/loginOut')}">退出</a>
+                            </div>
+                        </if>
+                        <div class="form-inline">
+                            <if condition="COOKIE('nickname') eq ''">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="nickname" placeholder="昵称(必填)">
+                                </div>
+                            </if>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" placeholder="邮箱(必填)">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="web" placeholder="个人网站(可选)">
+                                <input type="text" class="form-control" id="web" placeholder="网站(可选)">
                             </div>
                             <button type="submit" class="btn btn-default">发布</button>
                         </div>
                     </div>
+                    <if condition="COOKIE('nickname') neq ''">
+                    <div class="git_url">
+                        源码地址：<a href="https://github.com/xxfpurple/xxfblog1.0" target="_blank">https://github.com/xxfpurple/xxfblog1.0</a>
+                    </div>
+                    </if>
                     <volist name="list" id="row">
                         <article class="post twitter-post">
                             <div class="message-content clearfix">
@@ -93,11 +124,24 @@
 </block>
 <block name="script">
     <script>
+        $('.smilie-close').click(function(){
+            $('#smilies').removeClass('selected');
+        });
+        $('.smilies-icon').click(function(){
+            $('#smilies').addClass('selected');
+        });
+
+        $('.smilie-click').click(function(){
+            var _this = $(this);
+            $('#textarea').append(_this.html());
+            $('#smilies').removeClass('selected');
+        });
+
         $('.btn').click(function(){
             var nickname = $('#nickname').val(),
                     email = $('#email').val(),
                     web = $('#web').val(),
-                    content = $('#content').val();
+                    content = $('#textarea').html();
             if(content == ''){
                 alert('内容不能为空!');
             }else if(nickname == ''){

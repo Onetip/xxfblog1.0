@@ -1,0 +1,17 @@
+<extend name="Public/base" />
+<block name="main">
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-lg-10 col-lg-push-1 friend">
+                    <h1>最近QQ登陆的访客：{$count}人</h1>
+                    <volist name="list" id="row">
+                        <img src="{$row['head']}" alt="{$row['nickname']}" title="{$row['nickname']}" class="img-circle">
+                    </volist>
+                </main>
+            </div>
+        </div>
+    </section>
+</block>
+
+

@@ -29,6 +29,10 @@ return array(
             )
         ),
         array(
+            'group' => array('title' => '访客', 'icon' => 'fa-heart', 'class' => '', 'url' => 'Bind/index', 'is_developer' => 0),
+            '_child' => array()
+        ),
+        array(
             'group' => array('title' => '友情链接', 'icon' => 'fa-external-link', 'class' => '', 'url' => 'FriendlyLink/index', 'is_developer' => 0),
             '_child' => array()
         ),

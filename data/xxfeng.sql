@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016-03-05 09:04:32
+-- Generation Time: 2016-03-09 00:49:08
 -- 服务器版本： 5.6.12-log
 -- PHP Version: 5.4.16
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `xxf_article` (
   `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
   `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '数据状态'
-) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COMMENT='文章咨询表  别名art';
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8 COMMENT='文章咨询表  别名art';
 
 --
 -- 转存表中的数据 `xxf_article`
@@ -52,6 +52,8 @@ CREATE TABLE IF NOT EXISTS `xxf_article` (
 INSERT INTO `xxf_article` (`id`, `uid`, `title`, `cate_id`, `author`, `content`, `brief`, `tags`, `link`, `sort`, `cover`, `view`, `is_top`, `create_time`, `update_time`, `status`) VALUES
 (47, 0, 'JavaScript 事件——“事件类型', 49, '薛晓峰', '<span style="color:#777777;font-family:''Open Sans'', ''Helvetica Neue'', Helvetica, Arial, STHeiti, ''Microsoft Yahei'', SimSun, sans-serif;font-size:13px;line-height:20.8px;background-color:#FFFFFF;">备事件 orientationchange事件 该事件的window.orientation属性中包含3个值：0表示肖像模式、90表示左旋转的横向模式、-90表示右旋转的横向模式。event对象不包含任何信息： {代码...} deviceorientationevent...</span>', '备事件 orientationchange事件 该事件的window.orientation属性中包含3个值：0表示肖像模式、90表示左旋转的横向模式、-90表示右旋转的横向模式。event对象不包含任何信息： {代码...} deviceorientationevent...', 'js', '', 0, '/article/20160120/thumb_igQ1z5JUVmc3SgIFb7oD.jpg', 0, 0, 1453253448, 1453363218, 1),
 (46, 0, 'JavaScript 事件——“内存和性能”的注意要点', 49, '薛晓峰', '<span style="color:#777777;font-family:''Open Sans'', ''Helvetica Neue'', Helvetica, Arial, STHeiti, ''Microsoft Yahei'', SimSun, sans-serif;font-size:13px;line-height:20.8px;background-color:#FFFFFF;">事件委托 对“事件处理程序过多”的问题的解决方案就是事件委托。例如，click事件会一直冒泡到document层次。也就是说，我们可以为整个页面指定一个onclick事件处理程序，而不必给每个可单击的元素分别添加事件处理...</span>', '事件委托 对“事件处理程序过多”的问题的解决方案就是事件委托。例如，click事件会一直冒泡到document层次。也就是说，我们可以为整个页面指定一个onclick事件处理程序，而不必给每个可单击的元素分别添加事件处理...', 'js,php', '', 0, '/article/20160120/thumb_0E6r47zPaaxYT3SNwHSV.jpg', 0, 1, 1453253420, 1453448102, 1),
+(48, 0, 'asdasdas', 49, '薛晓峰', 'asdasda', 'asdsadas', '', '', 0, '0', 0, 0, 1457414717, 0, 1),
+(49, 0, '阿斯顿撒打算', 49, '薛晓峰', 'asda是', '撒旦撒旦是', 'asdsa', '', 0, '0', 0, 0, 1457414794, 0, 1),
 (45, 0, 'Yeoman-- 一个强大的前端构建工具', 49, '薛晓峰', '<span style="color:#777777;font-family:''Open Sans'', ''Helvetica Neue'', Helvetica, Arial, STHeiti, ''Microsoft Yahei'', SimSun, sans-serif;font-size:13px;line-height:20.8px;background-color:#FFFFFF;">原文还是在简书上： Yeoman-- 一个强大的前端构建工具,我只是自己的搬运工！！ 上期跟大家试了试Vue-cli这个构建工具，这个让我想起了很多其他的前端工具，其中一个就是Yeoman（上次就剧透了的）,所以这期跟大家...</span>', '原文还是在简书上： Yeoman-- 一个强大的前端构建工具,我只是自己的搬运工！！ 上期跟大家试了试Vue-cli这个构建工具，这个让我想起了很多其他的前端工具，其中一个就是Yeoman（上次就剧透了的）,所以这期跟大家...', 'php', '', 0, '/article/20160120/thumb_shJkwDjgJRaGb7DutNRd.jpg', 0, 1, 1453253367, 1453253384, 1);
 
 -- --------------------------------------------------------
@@ -108,7 +110,37 @@ CREATE TABLE IF NOT EXISTS `xxf_background` (
 --
 
 INSERT INTO `xxf_background` (`id`, `img`, `update_time`, `status`) VALUES
+(7, '/background/20151107/3DlnY6FwNVy7FpQPOtYQ.jpg', 0, 1),
+(12, '/background/20151107/UVhrWKTzdbRTP4vnwtlw.jpg', 0, 1),
+(18, '/background/20151107/R99xS35tlFAnSxEc9udr.jpg', 0, 1),
+(20, '/background/20151107/VcKDxVZVRRhW4dZDOpW4.jpg', 0, 1),
+(21, '/background/20151111/K3ldAuvPwlJU8g0lfG0Z.jpg', 0, 0),
+(22, '/background/20151111/4cXiGI4akRs1TbkKvutO.jpg', 0, 1),
+(23, '/background/20151111/4v1XLmKbk3ZwknxOJeBJ.jpg', 0, 1),
+(24, '/background/20151111/vsTC0uExUMuzQJj9vMPj.jpg', 0, 1),
+(25, '/background/20151111/yxmtakjpHphXlZ90Fo1D.jpg', 0, 1),
+(26, '/background/20151111/Sb0dzdhBzXGEPvY7ksnf.jpg', 0, 1),
+(27, '/background/20151111/smrfcQfWNPiF1hdbqmTm.jpg', 1447392986, 1),
 (29, '/background/20160220/zrJjQg2JprEt03gntGas.jpg', 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `xxf_bind`
+--
+
+CREATE TABLE IF NOT EXISTS `xxf_bind` (
+  `bind_id` int(10) NOT NULL,
+  `type` varchar(100) NOT NULL COMMENT '登录类型',
+  `openid` varchar(100) NOT NULL COMMENT '用户第三方登录唯一标识',
+  `access_token` varchar(100) NOT NULL COMMENT '打开微博的钥匙 会过期 用户每使用一个要更新定期更新',
+  `expires_in` varchar(100) NOT NULL COMMENT 'token参数',
+  `refresh_token` varchar(100) NOT NULL COMMENT 'token参数',
+  `nickname` varchar(200) NOT NULL COMMENT '显示昵称',
+  `head` varchar(500) NOT NULL COMMENT '指向该用 户头像(GIF/JPG/PNG格式)的一个URL地址',
+  `create_time` int(10) unsigned NOT NULL,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '1'
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COMMENT='第三方登录绑定表';
 
 -- --------------------------------------------------------
 
@@ -182,15 +214,7 @@ CREATE TABLE IF NOT EXISTS `xxf_message` (
   `create_time` int(10) unsigned NOT NULL,
   `is_show` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `status` tinyint(1) unsigned DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='留言';
-
---
--- 转存表中的数据 `xxf_message`
---
-
-INSERT INTO `xxf_message` (`id`, `parent_id`, `uid`, `head`, `nickname`, `email`, `web_url`, `province`, `city`, `ip`, `content`, `create_time`, `is_show`, `status`) VALUES
-(5, 0, 0, 'http://www.gravatar.com/avatar/d40fe5343bcafa0e7ca9799f2e40eff6?s=40&d=mm&r=g', '大大', '111@163.com', '', '天津', '天津', '', '你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了你是谁了', 1457077743, 0, 1),
-(7, 0, 0, 'http://www.gravatar.com/avatar/0df01ae7dd51cec48fed56952f40842b?s=40&d=mm&r=g', 'asdas', 'dasdasd', '', '天津', '天津', '', 'asdasd', 1457080938, 1, 1);
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='留言';
 
 -- --------------------------------------------------------
 
@@ -215,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `xxf_nav` (
 INSERT INTO `xxf_nav` (`id`, `name`, `url`, `sort`, `target`, `status`, `active`) VALUES
 (1, '首页', '/myblog', 99, 0, 1, 'Index'),
 (2, '微语', '/myblog/Twitter', 99, 0, 1, 'Twitter'),
-(3, '一些音乐', '/myblog/Music', 0, 1, 0, 'Music'),
+(3, '访客', '/myblog/Friend', 0, 1, 1, 'Friend'),
 (6, '留言', '/myblog/Message', 0, 0, 1, 'Message');
 
 -- --------------------------------------------------------
@@ -227,7 +251,7 @@ INSERT INTO `xxf_nav` (`id`, `name`, `url`, `sort`, `target`, `status`, `active`
 CREATE TABLE IF NOT EXISTS `xxf_tag` (
   `id` int(10) unsigned NOT NULL,
   `tag_name` varchar(60) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `xxf_tag`
@@ -239,7 +263,7 @@ INSERT INTO `xxf_tag` (`id`, `tag_name`) VALUES
 (7, 'mysql'),
 (14, 'js'),
 (15, 'ppp'),
-(16, '');
+(17, 'asdsa');
 
 -- --------------------------------------------------------
 
@@ -254,13 +278,6 @@ CREATE TABLE IF NOT EXISTS `xxf_twitter` (
   `update_time` int(10) unsigned NOT NULL,
   `status` tinyint(1) unsigned NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
-
---
--- 转存表中的数据 `xxf_twitter`
---
-
-INSERT INTO `xxf_twitter` (`id`, `content`, `create_time`, `update_time`, `status`) VALUES
-(2, '111', 1457166477, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -309,6 +326,12 @@ ALTER TABLE `xxf_article_category`
 --
 ALTER TABLE `xxf_background`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `xxf_bind`
+--
+ALTER TABLE `xxf_bind`
+  ADD PRIMARY KEY (`bind_id`);
 
 --
 -- Indexes for table `xxf_config`
@@ -360,7 +383,7 @@ ALTER TABLE `xxf_user`
 -- AUTO_INCREMENT for table `xxf_article`
 --
 ALTER TABLE `xxf_article`
-  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=48;
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `xxf_article_category`
 --
@@ -371,6 +394,11 @@ ALTER TABLE `xxf_article_category`
 --
 ALTER TABLE `xxf_background`
   MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
+--
+-- AUTO_INCREMENT for table `xxf_bind`
+--
+ALTER TABLE `xxf_bind`
+  MODIFY `bind_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `xxf_config`
 --
@@ -385,7 +413,7 @@ ALTER TABLE `xxf_friendly_link`
 -- AUTO_INCREMENT for table `xxf_message`
 --
 ALTER TABLE `xxf_message`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `xxf_nav`
 --
@@ -395,7 +423,7 @@ ALTER TABLE `xxf_nav`
 -- AUTO_INCREMENT for table `xxf_tag`
 --
 ALTER TABLE `xxf_tag`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `xxf_twitter`
 --

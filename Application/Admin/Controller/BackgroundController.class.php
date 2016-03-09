@@ -24,7 +24,7 @@ class BackgroundController extends BaseController {
 
     protected function processData($data = array()){
         if(!empty($_FILES['img']['name'])){
-            $data['img'] = $this->uploadPic('background',450,250,true);
+            $data['img'] = $this->uploadPic('background');
         }
         return $data;
     }
