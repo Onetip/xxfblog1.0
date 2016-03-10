@@ -42,6 +42,7 @@ class IndexController extends BaseController {
         if(!empty($info['tags'])){
             $info['tags'] = explode(',',$info['tags']);
         }
+        D('Article')->where(array('id'=>I('get.id')))->setInc('view');
         $this->assign('title',$info['title']);
         $this->assign('info',$info);
         $this->assign('neighborlog',$neighborlog);
