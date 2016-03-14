@@ -48,7 +48,7 @@ class LoginController extends Controller{
 
     public function loginOut(){
         cookie('nickname',null);
-        cookie('nickname',null);
+        cookie('head',null);
         redirect(U('Message/index'));
     }
 
